@@ -11,7 +11,6 @@
         vesktop
         shottr
         freelens-bin
-        tailscale-gui
 
         nixd
         ffmpeg

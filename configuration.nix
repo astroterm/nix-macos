@@ -59,6 +59,7 @@
             "alfred"
             "chatgpt"
             "hammerspoon"
+            "tailscale-app"
         ];
 
         onActivation = {
