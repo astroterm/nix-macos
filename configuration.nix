@@ -11,6 +11,8 @@
     # Necessary for using flakes on this system.
     nix.settings.experimental-features = "nix-command flakes";
 
+    security.pam.services.sudo_local.touchIdAuth
+
     # Enable alternative shell support in nix-darwin.
     # programs.fish.enable = true;
 
