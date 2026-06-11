@@ -15,6 +15,11 @@
         nixd
         ffmpeg
 
+        kubectl
+        kubernetes-helm
+        fluxcd
+        talosctl
+
         nerd-fonts.ubuntu-mono
         nerd-fonts.ubuntu
 
