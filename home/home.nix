@@ -14,6 +14,7 @@
         handbrake
 
         nixd
+        ffmpeg
 
         nerd-fonts.ubuntu-mono
         nerd-fonts.ubuntu
