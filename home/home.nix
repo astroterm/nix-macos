@@ -11,7 +11,6 @@
         vesktop
         shottr
         freelens-bin
-        handbrake
 
         nixd
         ffmpeg
