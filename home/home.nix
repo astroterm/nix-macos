@@ -11,11 +11,18 @@
         vesktop
         shottr
         freelens-bin
+        handbrake
 
-        texlive.combined.scheme-medium
+        nixd
 
         nerd-fonts.ubuntu-mono
         nerd-fonts.ubuntu
+
+        (pkgs.texlive.combine{
+            inherit (pkgs.texlive)
+                scheme-medium
+                collection-latexextra;
+        })
     ];
 
     home.shell.enableNushellIntegration = true;
