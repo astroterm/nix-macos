@@ -23,6 +23,8 @@
         profiles.default.extensions = with pkgs.vscode-extensions; [
             jnoortheen.nix-ide
             arcticicestudio.nord-visual-studio-code
+            reditorsupport.r
+            reditorsupport.r-syntax
         ];
     };
 
@@ -59,7 +61,7 @@
             pull.rebase = true;
         };
     };
-    
+
     programs.nushell.enable = true;
     programs.firefox.enable = true;
     programs.vesktop.enable = true;
