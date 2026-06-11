@@ -12,6 +12,8 @@
         shottr
         freelens-bin
 
+        texlive.combined.scheme-medium
+
         nerd-fonts.ubuntu-mono
         nerd-fonts.ubuntu
     ];
