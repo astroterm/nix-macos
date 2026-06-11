@@ -11,14 +11,21 @@
         vesktop
         shottr
         freelens-bin
+        tailscale-gui
 
         nixd
         ffmpeg
+        fastfetch
+        ripgrep
+        ripgrep-all
+        python315
 
         kubectl
         kubernetes-helm
         fluxcd
         talosctl
+        cilium-cli
+        hubble
 
         nerd-fonts.ubuntu-mono
         nerd-fonts.ubuntu
@@ -72,6 +79,14 @@
             };
             init.defaultBranch = "main";
             pull.rebase = true;
+        };
+    };
+
+    programs.uv = {
+        enable = true;
+        settings = {
+            python-downloads = "manual";
+            python-preference = "system";
         };
     };
 
