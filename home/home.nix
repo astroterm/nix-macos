@@ -37,12 +37,12 @@
             quit_when_all_windows_are_closed = true;
             initial_cols = 96;
             initial_rows = 32;
-            # font = pkgs.lib.mkLuaInline ''
-            #     wezterm.font("UbuntuMono Nerd Font")
-            # '';
-            # default_prog = pkgs.lib.mkLuaInline ''
-            #     { "/etc/profiles/per-user/hdo/bin/nu" }
-            # '';
+            font = pkgs.lib.mkLuaInline ''
+                wezterm.font("UbuntuMono Nerd Font")
+            '';
+            default_prog = pkgs.lib.mkLuaInline ''
+                { "/etc/profiles/per-user/hdo/bin/nu" }
+            '';
             
             
         };
