@@ -23,8 +23,6 @@
         profiles.default.extensions = with pkgs.vscode-extensions; [
             jnoortheen.nix-ide
             arcticicestudio.nord-visual-studio-code
-            reditorsupport.r
-            reditorsupport.r-syntax
         ];
     };
 
