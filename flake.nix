@@ -20,12 +20,16 @@
             url = "github:homebrew/homebrew-cask";
             flake = false;
         };
+        fenix = {
+            url = "github:nix-community/fenix";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
     };
 
-    outputs = {
+    outputs = inputs@{
         self, nix-darwin, nixpkgs, home-manager,
         nix-homebrew, homebrew-core, homebrew-cask,
-        ... 
+        fenix, ... 
     }: {
         # Build darwin flake using:
         # $ darwin-rebuild build --flake .#earth
@@ -41,6 +45,7 @@
                     home-manager.useGlobalPkgs = true;
                     home-manager.useUserPackages = true;
                     home-manager.users.hdo = import ./home/home.nix;
+                    home-manager.extraSpecialArgs = { inherit inputs; };
                 }
 
                 nix-homebrew.darwinModules.nix-homebrew
