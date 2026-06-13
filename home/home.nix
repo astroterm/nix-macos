@@ -34,9 +34,7 @@
                 scheme-medium
                 collection-latexextra;
         })
-        inputs.fenix.packages.${pkgs.system}.complete.toolchain
     ];
-
 
     home.shell.enableNushellIntegration = true;
 
