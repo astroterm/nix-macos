@@ -24,12 +24,13 @@
             url = "github:nix-community/fenix";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+        nixvim.url = "github:nix-community/nixvim";
     };
 
     outputs = {
         self, nix-darwin, nixpkgs, home-manager,
         nix-homebrew, homebrew-core, homebrew-cask,
-        fenix, ... 
+        fenix, nixvim, ... 
     }: {
         # Build darwin flake using:
         # $ darwin-rebuild build --flake .#earth
@@ -45,7 +46,8 @@
                     home-manager.useGlobalPkgs = true;
                     home-manager.useUserPackages = true;
                     home-manager.users.hdo = import ./home/home.nix;
-                    home-manager.extraSpecialArgs = { inherit fenix; };
+                    home-manager.extraSpecialArgs = { inherit fenix nixvim; };
+                    home-manager.sharedModules = [ nixvim.homeModules.nixvim ];
                 }
 
                 nix-homebrew.darwinModules.nix-homebrew
