@@ -60,12 +60,12 @@
             }
         ];
         userCommands = {
-            files.command = "lua Snacks.picker.files()";
-            grep.command = "lua Snacks.picker.grep()";
-            buffers.command = "lua Snacks.picker.buffers()";
-            yazi.command = "Yazi";
-            diagnostics.command = "lua Snacks.picker.diagnostics()";
-            explore.command = "lua Snacks.explorer()";
+            Files.command = "lua Snacks.picker.files()";
+            Grep.command = "lua Snacks.picker.grep()";
+            Buffers.command = "lua Snacks.picker.buffers()";
+            Yazi.command = "Yazi";
+            Diagnostics.command = "lua Snacks.picker.diagnostics()";
+            Explore.command = "lua Snacks.explorer()";
         };
     };
 }
