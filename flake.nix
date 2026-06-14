@@ -28,7 +28,7 @@
     };
 
     outputs = {
-        self, nix-darwin, nixpkgs, home-manager,
+        self, nix-darwin, home-manager,
         nix-homebrew, homebrew-core, homebrew-cask,
         fenix, nixvim, ... 
     }: {
