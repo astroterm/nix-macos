@@ -41,6 +41,10 @@
         };
     };
 
+    programs.bottom = {
+        enable = true;
+    };
+
     programs.uv = {
         enable = true;
         settings = {
