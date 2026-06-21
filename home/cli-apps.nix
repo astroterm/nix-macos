@@ -56,12 +56,12 @@
     programs.yazi = {
         enable = true;
         enableNushellIntegration = true;
-        plugins = {
-            smart-enter = pkgs.yaziPlugins.smart-enter;
-            smart-filter = pkgs.yaziPlugins.smart-filter;
-            mime-ext = pkgs.yaziPlugins.mime-ext;
-            ouch = pkgs.yaziPlugins.ouch;
-            nord = pkgs.yaziPlugins.nord;
+        plugins = with pkgs.yaziPlugins; {
+            smart-enter = smart-enter;
+            smart-filter = smart-filter;
+            mime-ext = mime-ext;
+            ouch = ouch;
+            nord = nord;
         };
     };
 

@@ -58,7 +58,6 @@
         casks = [
             "alfred"
             "chatgpt"
-            "hammerspoon"
             "tailscale-app"
         ];
 
