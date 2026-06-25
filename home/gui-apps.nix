@@ -35,6 +35,55 @@
             '';
         };
     };
+
+    # programs.zed-editor = {
+    #     enable = true;
+    #     extensions = [
+    #         "nord" "git-firefly"
+    #         "toml" "log"
+    #         "latex" "nix"
+    #         "ruff" "vscode-icons"
+    #         "nu" "helm"
+    #     ];
+    #     userSettings = {
+    #         disable_ai = true; # MUAHAHAHAHAHA
+    #         autosave = "on_focus_change";
+    #         code_lens = "on";
+    #         auto_signature_help = true;
+    #         vim_mode = true;
+
+    #         diagnostics.inline.enabled = true;
+    #         hover_popover_delay = 100;
+    #         inlay_hints.enabled = true;
+    #         colorize_brackets = true;
+
+    #         terminal = {
+    #             shell.program = "nu";
+    #             font_family = "UbuntuMono Nerd Font";
+    #             font_size = 15;
+    #         };
+
+    #         theme = {
+    #             mode = "dark";
+    #             dark = "Nord Dark";
+    #             light = "Nord Light";
+    #         };
+            
+    #         buffer_font_family = "UbuntuMono Nerd Font";
+    #         buffer_font_size = 14;
+    #         ui_font_family = "Ubuntu Nerd Font";
+    #         ui_font_size = 15;
+
+    #         active_pane_modifiers.border_size = 0.0;
+    #         diff_view_style = "unified";
+
+    #         telemetry = {
+    #             diagnostics = false;
+    #             metrics = false;
+    #         };
+            
+    #     };
+    # };
     
     programs.firefox.enable = true;
     programs.vesktop.enable = true;

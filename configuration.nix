@@ -59,6 +59,7 @@
             "alfred"
             "chatgpt"
             "tailscale-app"
+            "handbrake-app"
         ];
 
         onActivation = {
