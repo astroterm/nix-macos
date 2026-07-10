@@ -57,12 +57,19 @@
             lsp = {
                 enable = true;
                 servers = {
-                    rust_analyzer.enable = true;
                     nixd.enable = true;
                     ruff.enable = true;
                     yamlls.enable = true;
                     clangd.enable = true;
+                    rust_analyzer = {
+                        enable = true;
+                        installCargo = false;
+                        installRustc = false;
+                    };
                 };
+            };
+            smear-cursor = {
+                enable = true;
             };
         };
 
@@ -87,6 +94,20 @@
                 key = "<C-l>";
                 action = "<C-w>l";
             }
+
+            {
+                mode = "v";
+                key = "<Tab>";
+                action = ">gv";
+                options.desc = "Indent selection";
+            }
+            {
+                mode = "v";
+                key = "<S-Tab>";
+                action = "<gv";
+                options.desc = "Deindent selection";
+            }
+
         ];
         userCommands = {
             Files.command = "lua Snacks.picker.files()";

@@ -58,8 +58,10 @@
         casks = [
             "alfred"
             "chatgpt"
+            "thaw@beta"
             "tailscale-app"
             "handbrake-app"
+            "bettertouchtool"
         ];
 
         onActivation = {
