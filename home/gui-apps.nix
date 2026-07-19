@@ -13,6 +13,7 @@
             jnoortheen.nix-ide
             arcticicestudio.nord-visual-studio-code
             james-yu.latex-workshop
+            ms-python.python
         ];
     };
 
@@ -22,8 +23,10 @@
             font_size = 16;
             color_scheme = "nord";
             enable_tab_bar = false;
-            window_decorations = "TITLE | RESIZE";
+            window_decorations = "RESIZE";
             window_close_confirmation = "NeverPrompt";
+            window_background_opacity = 0.8;
+            macos_window_background_blur = 90;
             quit_when_all_windows_are_closed = true;
             initial_cols = 128;
             initial_rows = 36;

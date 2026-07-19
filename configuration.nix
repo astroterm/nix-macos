@@ -57,7 +57,7 @@
 
         casks = [
             "alfred"
-            "chatgpt"
+            "chatgpt-classic"
             "thaw@beta"
             "tailscale-app"
             "handbrake-app"

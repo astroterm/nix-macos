@@ -68,11 +68,35 @@
                     };
                 };
             };
+            transparent = {
+                enable = true;
+                callSetup = true;
+                settings = {
+                    extra_groups = [
+                        "NormalNC"
+                        "NormalFloat"
+                        "FloatBorder"
+                        "SignColumn"
+                        "EndOfBuffer"
+
+                        "SnacksNormal"
+                        "SnacksNormalNC"
+                        "SnacksWinBar"
+                        "SnacksPicker"
+                        "SnacksPickerBorder"
+                        "SnacksPickerInput"
+                        "SnacksPickerInputBorder"
+                        "SnacksPickerList"
+                        "SnacksPickerListBorder"
+                        "SnacksPickerPreview"
+                        "SnacksPickerPreviewBorder"
+                    ];
+                };
+            }; 
             smear-cursor = {
                 enable = true;
             };
         };
-
         keymaps = [
             {
                 mode = "n";
