@@ -4,12 +4,15 @@
     home.packages = with pkgs; [
         nixd
         python315
+        dotnet-sdk_10
+        just
+        just-lsp
 
-        (pkgs.texlive.combine{
-            inherit (pkgs.texlive)
-                scheme-medium
-                collection-latexextra;
-        })
+        (texliveMedium.withPackages (
+            ps: with ps; [
+                collection-latexextra
+            ]
+        ))
         fenix.packages.${pkgs.system}.complete.toolchain
     ];
 }

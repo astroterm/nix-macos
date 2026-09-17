@@ -8,23 +8,18 @@
         ripgrep
         ripgrep-all
         imagemagick
+        pandoc
 
         # Kubernetes
         kubectl
         kubernetes-helm
         fluxcd
-        talosctl
+        # talosctl
         cilium-cli
         hubble
 
-        # Yazi programs
-        bat
-        fd
-        fzf
-        mediainfo
-        p7zip
-        poppler
-        zoxide
+        # Fucking Microsoft bullshit
+        sqlcmd
     ];
 
     home.shell.enableNushellIntegration = true;
@@ -77,10 +72,13 @@
                 /nix/var/nix/profiles/default/bin
             ]
             path add --append [
+                /Users/hdo/.dotnet/tools
                 /opt/homebrew/bin
                 /opt/homebrew/sbin
                 /usr/local/bin
             ]
+            $env.DOTNET_ROOT = "${pkgs.dotnet-sdk_10}/share/dotnet"
+            $env.DOTNET_ROOT_ARM64 = $env.DOTNET_ROOT
         '';
     };
 
@@ -88,5 +86,14 @@
         enable = true;
         nix-direnv.enable = true;
         enableNushellIntegration = true;
+    };
+
+    programs.clock-rs = {
+        enable = true;
+        settings = {
+            general = {
+                color = "cyan";
+            };
+        };
     };
 }

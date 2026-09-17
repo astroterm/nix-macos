@@ -18,6 +18,7 @@
         ./gui-apps.nix
         ./cli-apps.nix
         ./languages.nix
+        ./dependencies.nix
         ./neovim.nix
     ];
 

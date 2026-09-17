@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
     programs.nixvim = {
@@ -14,6 +14,7 @@
             termguicolors = true;
             scrolloff = 8;
             clipboard = "unnamedplus";
+            guicursor = "a:ver25";
         };
 
         diagnostic.settings = {
@@ -22,9 +23,21 @@
             signs = true;
         };
 
+        highlightOverride = {
+            "@variable" = {
+                bold = false;
+            };
+        };
+
         plugins = {
             yazi.enable = true;
             luasnip.enable = true;
+            lualine = {
+                enable = true;
+                settings = {
+                    options.globalstatus = true;
+                };
+            };
             noice = {
                 enable = true;
                 settings = {
@@ -61,11 +74,36 @@
                     ruff.enable = true;
                     yamlls.enable = true;
                     clangd.enable = true;
+                    csharp_ls = {
+                        enable = true;
+                        package = null;
+                    };
                     rust_analyzer = {
                         enable = true;
                         installCargo = false;
                         installRustc = false;
                     };
+                };
+            };
+            treesitter = {
+                enable = true;
+
+                settings = {
+                    highlight.enable = true;
+                    indent.enable = true;
+                };
+
+                grammarPackages =
+                    with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+                        rust python nix
+                        c cpp c_sharp
+                        json yaml xml 
+                    ];
+            };
+            mini = {
+                enable = true;
+                modules = {
+                    
                 };
             };
             transparent = {
@@ -95,6 +133,9 @@
             }; 
             smear-cursor = {
                 enable = true;
+                settings = {
+                    vertical_bar_cursor = true;
+                };
             };
         };
         keymaps = [

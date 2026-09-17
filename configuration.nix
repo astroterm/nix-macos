@@ -62,6 +62,13 @@
             "tailscale-app"
             "handbrake-app"
             "bettertouchtool"
+            "yubico-authenticator"
+            "unifi-identity-endpoint"
+        ];
+
+        brews = [
+            "spim"
+            "talosctl"
         ];
 
         onActivation = {
@@ -70,4 +77,7 @@
             cleanup = "zap";
         };
     };
+
+    programs._1password-gui.enable = true;
+    programs._1password.enable = true;
 }
