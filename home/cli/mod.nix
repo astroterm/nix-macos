@@ -1,6 +1,9 @@
 { pkgs, ... }: {
     
     imports = [
+        ./general.nix
+        ./developer.nix
+        ./nushell.nix
         ./neovim.nix
     ];
 

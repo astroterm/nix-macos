@@ -5,11 +5,11 @@
 
         casks = [
             "alfred"
+            "vorssaint"
             "chatgpt-classic"
             "thaw@beta"
             "tailscale-app"
             "handbrake-app"
-            "bettertouchtool"
             "yubico-authenticator"
             "okta-verify"
             "unifi-identity-endpoint"
