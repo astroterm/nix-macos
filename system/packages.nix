@@ -4,6 +4,8 @@
     environment.systemPackages = with pkgs; [
         neovim
         openssh
-        cowsay
     ];
+
+    programs._1password-gui.enable = true;
+    programs._1password.enable = true;
 }

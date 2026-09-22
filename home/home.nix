@@ -14,7 +14,6 @@
     ];
 
     imports = [
-        # paneru.homeModules.paneru
         ./gui-apps.nix
         ./cli-apps.nix
         ./languages.nix

@@ -39,7 +39,6 @@
                 inherit self;
             };
             modules = [
-                ./configuration.nix
                 system/main.nix
 
                 home-manager.darwinModules.home-manager
