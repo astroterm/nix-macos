@@ -7,7 +7,6 @@
             "alfred"
             "vorssaint"
             "chatgpt-classic"
-            "thaw@beta"
             "tailscale-app"
             "handbrake-app"
             "yubico-authenticator"

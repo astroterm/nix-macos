@@ -1,14 +1,18 @@
-{ ... }: {
+{ pkgs, nixpkgs-stable, ... }: {
 
     programs.aerospace = {
         enable = true;
         launchd.enable = true;
+        package = nixpkgs-stable.legacyPackages.${pkgs.system}.aerospace;
+
         settings = {
             config-version = 2;
             start-at-login = true;
             default-root-container-layout = "accordion";
             default-root-container-orientation = "vertical";
             automatically-unhide-macos-hidden-apps = true;
+
+
             accordion-padding = 20;
             gaps.inner = {
                 horizontal = 10;

@@ -3,6 +3,8 @@
 
     inputs = {
         nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+        nixpkgs-stable.url = "github:NixOS/nixpkgs/nixpkgs-26.05-darwin";
+
         nix-darwin = {
             url = "github:nix-darwin/nix-darwin/master";
             inputs.nixpkgs.follows = "nixpkgs";
@@ -30,7 +32,7 @@
     outputs = {
         self, nix-darwin, home-manager,
         nix-homebrew, homebrew-core, homebrew-cask,
-        fenix, nixvim, ... 
+        fenix, nixvim, nixpkgs-stable, ... 
     }: {
         # Build darwin flake using:
         # $ darwin-rebuild build --flake .#earth
@@ -47,7 +49,7 @@
                         users.hdo = import ./home/home.nix;
                         useUserPackages = true;
                         useGlobalPkgs = true;
-                        extraSpecialArgs = { inherit fenix nixvim; };
+                        extraSpecialArgs = { inherit fenix nixvim nixpkgs-stable; };
                         sharedModules = [ nixvim.homeModules.nixvim ];
                     };
                 }
