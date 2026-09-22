@@ -9,6 +9,7 @@
         ripgrep-all
         imagemagick
         pandoc
+        yubikey-manager
 
         # Kubernetes
         kubectl
@@ -62,6 +63,11 @@
 
     programs.nushell = {
         enable = true;
+        shellAliases.rebuild = "sudo darwin-rebuild switch";
+
+        settings = {
+            show_banner = false;
+        };
 
         extraEnv = ''
             use std "path add"

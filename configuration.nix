@@ -6,6 +6,7 @@
     # $ nix-env -qaP | grep wget
     environment.systemPackages = with pkgs; [
         neovim
+        openssh
     ];
 
     # Necessary for using flakes on this system.
@@ -63,12 +64,14 @@
             "handbrake-app"
             "bettertouchtool"
             "yubico-authenticator"
+            "okta-verify"
             "unifi-identity-endpoint"
         ];
 
         brews = [
             "spim"
             "talosctl"
+            "age-plugin-se"
         ];
 
         onActivation = {

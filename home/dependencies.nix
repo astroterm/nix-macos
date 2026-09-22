@@ -5,7 +5,6 @@
         libfido2
         age
         age-plugin-yubikey
-        age-plugin-se
 
         # Yazi programs
         bat

@@ -24,10 +24,6 @@
             url = "github:nix-community/fenix";
             inputs.nixpkgs.follows = "nixpkgs";
         };
-        # paneru = {
-        #     url = "github:karinushka/paneru";
-        #     inputs.nixpkgs.follows = "nixpkgs";
-        # };
         nixvim.url = "github:nix-community/nixvim";
     };
 
@@ -44,6 +40,7 @@
             };
             modules = [
                 ./configuration.nix
+                system/main.nix
 
                 home-manager.darwinModules.home-manager
                 {
