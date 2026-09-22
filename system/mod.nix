@@ -1,6 +1,5 @@
-{ ... }:
-
-{
+{ ... }: {
+    
     users.users.hdo.home = "/Users/hdo";
 
     imports = [

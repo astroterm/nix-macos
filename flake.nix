@@ -43,11 +43,13 @@
 
                 home-manager.darwinModules.home-manager
                 {
-                    home-manager.useGlobalPkgs = true;
-                    home-manager.useUserPackages = true;
-                    home-manager.users.hdo = import ./home/home.nix;
-                    home-manager.extraSpecialArgs = { inherit fenix nixvim; };
-                    home-manager.sharedModules = [ nixvim.homeModules.nixvim ];
+                    home-manager = {
+                        users.hdo = import ./home/home.nix;
+                        useUserPackages = true;
+                        useGlobalPkgs = true;
+                        extraSpecialArgs = { inherit fenix nixvim; };
+                        sharedModules = [ nixvim.homeModules.nixvim ];
+                    };
                 }
 
                 nix-homebrew.darwinModules.nix-homebrew
