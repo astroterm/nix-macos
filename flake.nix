@@ -39,7 +39,7 @@
                 inherit self;
             };
             modules = [
-                system/main.nix
+                system/mod.nix
 
                 home-manager.darwinModules.home-manager
                 {
